@@ -1,0 +1,30 @@
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU&name=Miguel&address=prueba&picture=1234.png" http://localhost/project/addUser  
+
+ 
+
+ curl -X PUT -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU&name=modificado&address=modificada&picture=111.png" http://localhost/project/editUser/7
+
+
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU" http://localhost/project/getUsersByName/modi
+
+
+
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU" http://localhost/project/allUsers
+
+
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5MTU2MzMsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDAyMDMzLCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.zpuNz9dx5PxG6F-R-br5RipO-m6XbYFBqDx4TtgMcQQ" -X DELETE http://localhost/project/deleteUser/11
+
+
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU&path=/home/aramik/workspace/project/img/img.jpg" http://localhost/project/addPicture/2
+
+
+
+ curl -d "admin_nick=Aram&admin_pass=OlxPass"  http://localhost/project/generateToken
+
+
+curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5NDUxNTQsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDMxNTU0LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.FYQ5KErCR4B17UKu1bTmrroKkNrOPEtMCjOFdQ4ThSU" http://localhost/project/getUserById/1
+

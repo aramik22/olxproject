@@ -1,0 +1,32 @@
+FUNCION ADD USER
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4&name=aram&address=prueba&picture=1234.png" http://localhost/project/AddUser  
+
+ FUNCION EDIT USER
+
+ curl -X PUT -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4&name=modificado&address=modificada&picture=111.png" http://localhost/project/editUser/7
+
+ FUNCION GET USER
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4" http://localhost/project/getUsersByName/aram
+
+
+ FUNCION ALL USERS
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4" http://localhost/project/allUsers
+
+FUNCION DELETE USER
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY5MTU2MzMsImV4cGlyYXRlX3Rva2VuIjoxNDg3MDAyMDMzLCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.zpuNz9dx5PxG6F-R-br5RipO-m6XbYFBqDx4TtgMcQQ" -X DELETE http://localhost/project/deleteUser/11
+
+ FUNCION ADD PICTURE
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4&path=/home/aramik/workspace/project/img/img.jpg" http://localhost/project/addPicture/2
+
+ FUNCION GENERAR TOKEN
+
+ curl -d "admin_nick=Aram&admin_pass=OlxPass"  http://localhost/project/generateToken
+
+ FUNCION VERIFICAR TOKEN
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4" http://localhost/project/verifyToken

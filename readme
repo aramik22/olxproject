@@ -1,0 +1,100 @@
+Vamos a empezar con la clase Rest. Esta clase se ocupa de dos tareas principalmente:
+- Devolver las cabeceras con el código de estado y el resultado de la petición al cliente.
+- Filtrar los datos enviados en la petición.
+
+
+B) El método setCabecera  crea dos cabeceras que acompañarán a la respuesta de la petición. Para ello utilizará el código de estado asignado en el método mostrarRespuesta y la descripción del código obtenida mediante el método getCodEstado. Estas cabeceras no serán enviadas hasta que no se envíe la respuesta en mostrarRespuesta con la instrucción echo $data.
+C) El método getCodEstado contiene un array asociativo donde las claves son los posibles códigos de estado y los valores son las descripciones asociadas a esos códigos. Por lo tanto a partir del código de estado que se enviará junto a las cabeceras y la respuesta, devolverá su descripción.
+
+Los método encargados de limpiar los datos se encargan de sanear los datos que acompañan a las peticiones GET, POST, PUT y DELETE.
+A) El método tratarEntrada se encarga de sanear el array datos de entrada llamando al método limpiarEntrada y asigna dicho array de datos al atributo $datosPetición. Para ello primero comprueba cual es el método de petición ($_SERVER['REQUEST_METHOD']) y pasa los datos del array superglobal de la petición a limpiarEntrada. Esto quiere decir que si el método de estrada es GET se tratarán los datos del array $_GET. Y si es POST se tratarán los datos que puedan estar contenidos en $_POST.
+B) El método limpiarEntrada se encarga de sanear los datos que se le pasen como parámetro. Es un método recursivo para tratar cada uno de los valores de un array.
+
+Editar /etc/apache2/apache2.conf
+Modificar Directory por esto
+
+para q funcione .htaccess
+<Directory /var/www>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
+
+sudo a2enmod rewrite && sudo service apache2 restart
+ instalar
+ sudo apt-get install php5-curl
+
+
+ejecutar por consola
+
+curl -i -X POST -H "Content-Type: application/json"
+
+todos los usuarios
+
+curl  http://localhost/project/usuarios
+
+
+
+crear usuario
+
+ curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4&name=Miguel&address=prueba&picture=1234.png" http://localhost/project/AddUser  
+http://programandolo.blogspot.com.ar/2013/08/ejemplo-php-de-servicio-restful-parte-2.html
+
+http://programandolo.blogspot.com.ar/2013/08/ejemplo-php-de-servicio-restful-parte-1.html
+
+
+actualizar
+
+
+  curl -X PUT -d "name=modificado&address=modificada&picture=111.png" http://localhost/project/editUser/7  
+
+
+curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4"  http://localhost/project/getUserById/2
+
+
+curl  http://localhost/project/getUsersByName/modi
+
+
+http://localhost/project/allUsers
+
+
+
+  curl -X DELETE http://localhost/project/deleteUser/11  
+
+  curl -d "path=/home/aramik/workspace/project/img/img.jpg" http://localhost/project/addPicture/2
+
+
+    header("X-Rate-Limit-Limit: 1");
+    header("X-Rate-Limit-Remaining: 0");
+    header("X-Rate-Limit-Reset: 2");   que hago con esto?
+
+
+    instalar jason web token y composer
+
+    curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
+composer require firebase/php-jwt
+
+
+generar token 
+
+  curl -d "admin_nick=Aram&admin_pass=OlxPass"  http://localhost/project/generateToken
+curl -d "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbml0X3RpbWUiOjE0ODY4NTAyNDUsImV4cGlyYXRlX3Rva2VuIjoxNDg2OTM2NjQ1LCJkYXRhIjp7ImlkIjpudWxsLCJuYW1lIjoiQXJhbSJ9fQ.MiD9wSAtC2GLHz6DpU0LcjNER-KUROE4btixvSp0ee4" http://localhost/project/verifyToken
+
+1486846364
+1486849964
+1486846477
+
+psr0 camelCase
+
+
+$ wget https://phar.phpunit.de/phpunit-4.0.phar
+$ chmod +x phpunit-4.0.phar
+$ sudo mv phpunit-4.0.phar /usr/local/bin/phpunit
+$ phpunit --version
+sudo docker build -t olx ./
+sudo docker run -p 8080:80 --name servidor_web olx
+sudo docker run -ti -p 9002:80 olx bash
+
+sudo docker run -d -p 3306:3306 mysql 
